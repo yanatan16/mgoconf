@@ -1,3 +1,4 @@
+// Package mgoconf makes configuring mgo, the go mongo driver written by Canonical, easy to configure using a json file.
 package mgoconf
 
 import (
@@ -7,7 +8,7 @@ import (
 )
 
 // A configuration for the Mongo connections
-type MongoConfig struct {
+type Config struct {
 	// Info for dialing
 	Conn *mgo.DialInfo
 
@@ -16,8 +17,8 @@ type MongoConfig struct {
 }
 
 // Create a new mongo configuration
-func New() (*MongoConfig) {
-	return &MongoConfig{
+func New() (*Config) {
+	return &Config{
 		Conn: &mgo.DialInfo{	
 			Database     : "test",
 			Addrs  : []string{"localhost"},
@@ -27,7 +28,7 @@ func New() (*MongoConfig) {
 	}
 }
 
-func Read(fn string) (*MongoConfig, error) {
+func Read(fn string) (*Config, error) {
 	cfg := New()
 
 	file, err := ioutil.ReadFile(fn)
@@ -43,7 +44,7 @@ func Read(fn string) (*MongoConfig, error) {
 	return cfg, nil
 }
 
-func (cfg *MongoConfig) Dial() (*mgo.Session, error) {
+func (cfg *Config) Connect() (*mgo.Session, error) {
 	sess, err := mgo.DialWithInfo(cfg.Conn)
 	if err != nil {
 		return nil, err
