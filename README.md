@@ -63,12 +63,9 @@ Example
 		"_TimeoutComment": "nanoseconds",
 		"Timeout": 100000,
 
-		"_commented": {
-			"_comment": "Use these for authentication",
-
-			"Username": "something",
-			"Password": "something"
-		}
+		"_comment": "Use these for authentication. Omit otherwise.",
+		"Username": "something",
+		"Password": "something"
 	},
 
 	"Safety": { 
