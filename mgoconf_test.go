@@ -14,7 +14,7 @@ func TestReadAndConnect(t *testing.T) {
 		t.Error("config was not read correctly")
 	}
 
-	sess, err := cfg.Dial()
+	sess, err := cfg.Connect()
 	if err != nil {
 		t.Fatal(err, cfg.Conn)
 	}
