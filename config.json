@@ -1,23 +1,23 @@
 {
 	"Conn": {
-		"Database" : "ua",
+		"Database" : "test",
 		"Addrs": [
-			"localhost:27017"
+			"localhost"
 		],
-		"Direct": false,
+		"Direct": true,
 
 		"_TimeoutComment": "nanoseconds",
 		"Timeout": 100000,
 
 		"_commented": {
-			"_comment": "Use these for authentication",
+			"_comment": "Uncomment to use these for authentication",
 
 			"Username": "something",
 			"Password": "something"
 		}
 	},
 
-	"Safety": { 
+	"Safety": {
 		"_reference": "http://go.pkgdoc.org/labix.org/v2/mgo#Session.SetSafe",
 		"W": 1,
 		"Fsync": false
