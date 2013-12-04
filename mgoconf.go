@@ -2,9 +2,9 @@
 package mgoconf
 
 import (
-	"labix.org/v2/mgo"
-	"io/ioutil"
 	"encoding/json"
+	"io/ioutil"
+	"labix.org/v2/mgo"
 )
 
 // A configuration for the Mongo connections
@@ -17,14 +17,14 @@ type Config struct {
 }
 
 // Create a new mongo configuration
-func New() (*Config) {
+func New() *Config {
 	return &Config{
-		Conn: &mgo.DialInfo{	
-			Database     : "test",
-			Addrs  : []string{"localhost"},
-			Direct : true,
+		Conn: &mgo.DialInfo{
+			Database: "test",
+			Addrs:    []string{"localhost"},
+			Direct:   true,
 		},
-		Safety : &mgo.Safe{},
+		Safety: &mgo.Safe{},
 	}
 }
 

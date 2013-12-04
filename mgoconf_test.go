@@ -2,7 +2,6 @@ package mgoconf
 
 import (
 	"testing"
-	"fmt"
 )
 
 func TestReadAndConnect(t *testing.T) {
@@ -14,8 +13,6 @@ func TestReadAndConnect(t *testing.T) {
 	if cfg.Safety.W != 1 {
 		t.Error("config was not read correctly")
 	}
-
-	fmt.Println(cfg.Conn)
 
 	sess, err := cfg.Connect()
 	if err != nil {
