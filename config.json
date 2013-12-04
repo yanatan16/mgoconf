@@ -7,7 +7,7 @@
 		"Direct": true,
 
 		"_TimeoutComment": "nanoseconds",
-		"Timeout": 10000000,
+		"Timeout": 100000000,
 
 		"_commented": {
 			"_comment": "Uncomment to use these for authentication",
