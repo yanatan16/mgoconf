@@ -1,13 +1,13 @@
 {
 	"Conn": {
-		"Database" : "ua",
+		"Database" : "test",
 		"Addrs": [
 			"localhost:27017"
 		],
-		"Direct": false,
+		"Direct": true,
 
 		"_TimeoutComment": "nanoseconds",
-		"Timeout": 100000,
+		"Timeout": 10000000,
 
 		"_commented": {
 			"_comment": "Use these for authentication",
