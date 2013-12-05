@@ -6,11 +6,12 @@
 		],
 		"Direct": true,
 
-		"_TimeoutComment": "nanoseconds",
-		"Timeout": 1000000000,
 
 		"_commented": {
-			"_comment": "Uncomment to use these for authentication",
+			"_TimeoutComment": "nanoseconds",
+			"Timeout": 1000000000,
+			
+			"_comment": "Uncomment to use these for authentication or timeout",
 
 			"Username": "something",
 			"Password": "something"
